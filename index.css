@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    background-color: black;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+h2 {
+    font-weight: 600;
+    min-height: 7em;
+}
+
+.container {
+    display: flex;
+    padding-top:10vh;
+    height: 100vh;
+    flex-direction: row;
+    overflow: hidden;
+    background: #f857a6;
+    background: -webkit-linear-gradient(0deg, #f857a6 0%, #ff5858 100%);
+    background: linear-gradient(0deg, #f857a6 0%, #ff5858 100%);
+    align-items: center;
+}
+
+.card-container {
+    position: relative;
+    width:250px;
+    height:400px;
+    margin: 20px;
+
+}
+
+.card {
+    width:250px;
+    height:400px;
+    /* border:2px solid black; */
+    border-radius: 15px;
+    transition: all 2s;
+    background: rgba(255,255,255);
+    -webkit-backdrop-filter: blur(13px);
+    backdrop-filter: blur(13px);
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.front {
+    z-index: 1;
+    position: absolute;
+    transform: rotateY(0deg);
+    box-shadow: 0 0 16px 4px;
+}
+
+.back {
+    z-index:0; 
+    position:absolute;
+    transform: rotateY(180deg);
+}
+
+.image {
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 23.1% 100%); */
+    width: 250px;
+    height: 400px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 15px;
+    object-fit:cover;
+    position: relative;
+}
+
+.icon {
+    height:128px;
+    width:128px;
+} 
+
+.waves-rotated {
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.title {
+    position: absolute;
+    top:0;
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    width: 100vw;
+}
+
+.slogan {
+    position: absolute;
+    margin-top: 2.5em;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    width: 100vw;
+}
+
+.magicbutton {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    background-image: linear-gradient(45deg, #f857a6, #ff5858);
+    padding: 0.7em 2em;
+    border-radius: 15px;
+    box-shadow: none;
+    -webkit-transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s;
+    color: white;
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0
+  }
